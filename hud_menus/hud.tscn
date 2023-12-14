@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6e78tl058q62"]
+
+[ext_resource type="Texture2D" uid="uid://cuvl7l15a5xg6" path="res://assets/sprites/ui/bar_glass_200.png" id="1_gqm5m"]
+[ext_resource type="Texture2D" uid="uid://clo4dukbwd5od" path="res://assets/sprites/ui/bar_green_200.png" id="2_rah7k"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.2
+offset_top = -1078.0
+offset_right = 204.2
+offset_bottom = -1052.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+value = 100.0
+texture_under = ExtResource("1_gqm5m")
+texture_progress = ExtResource("2_rah7k")
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0dcjdcb0lmie"]
+
+[ext_resource type="Script" path="res://hud_menus/debug.gd" id="1_g8bcw"]
+
+[node name="debug" type="Node"]
+script = ExtResource("1_g8bcw")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 407.0
+offset_top = 647.0
+offset_right = 1538.0
+offset_bottom = 734.0
+placeholder_text = "Enter command here"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -672.0
+offset_top = -234.0
+offset_right = 672.0
+offset_bottom = -59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 128
+text = "DEVELOPER CONSOLE"
+
+[connection signal="text_set" from="TextEdit" to="." method="_on_text_edit_text_set"]

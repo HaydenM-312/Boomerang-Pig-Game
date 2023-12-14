@@ -1,0 +1,30 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "New_File"
+},
+"default_portrait": "yapping",
+"description": "",
+"display_name": "Hot dog guy",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, -20),
+"portraits": {
+"yapping": {
+"export_overrides": {
+"image": "\"res://icon.svg\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+"scale": 0.75
+}

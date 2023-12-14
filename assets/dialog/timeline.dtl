@@ -1,0 +1,7 @@
+join character 1
+character: man idk
+character: testing input
+- choice 1
+	character: choice 1? really?
+- choice 2
+	character: im a bit of a choice 2 guy myself

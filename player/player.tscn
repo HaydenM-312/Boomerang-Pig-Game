@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://ps57qggjygna"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_5oljv"]
+[ext_resource type="Texture2D" uid="uid://jqfmgaf7pl1r" path="res://unnamed.png" id="2_apvcm"]
+[ext_resource type="PackedScene" uid="uid://ddmyc2ajisxq8" path="res://player/bullet.tscn" id="2_hryha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6si0q"]
+size = Vector2(117, 121)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_5oljv")
+bullet_scene = ExtResource("2_hryha")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.500002, -2.38419e-07)
+scale = Vector2(2.825, 2.95)
+texture = ExtResource("2_apvcm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-66, 3)
+rotation = -0.818375
+scale = Vector2(0.320312, 0.800781)
+texture = ExtResource("2_apvcm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_6si0q")
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="GunCooldown" type="Timer" parent="."]
+wait_time = 1.25
+one_shot = true
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(96, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="DashCooldown" type="Timer" parent="."]
+wait_time = 0.125
+one_shot = true
+
+[node name="DashIframes" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
+[connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="DashIframes" to="." method="_on_dash_iframes_timeout"]

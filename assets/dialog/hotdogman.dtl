@@ -1,0 +1,6 @@
+join hot_dog_character (yapping) 1
+hot_dog_character (yapping): Do you like hot dogs?
+- Yes
+	hot_dog_character (yapping): Yay me too!
+- No
+	hot_dog_character (yapping): bruh
