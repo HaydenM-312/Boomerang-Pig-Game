@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxu8qmsb5rkfr"]
+[gd_scene load_steps=12 format=3 uid="uid://dxu8qmsb5rkfr"]
 
 [ext_resource type="Texture2D" uid="uid://pwst7bwtisyj" path="res://assets/tileset/scribbleDungeons_tiles.svg" id="1_6smg7"]
 [ext_resource type="Script" path="res://levels/main.gd" id="1_wyxn7"]
 [ext_resource type="PackedScene" uid="uid://doab3y0m7g5w1" path="res://enemies/enemy.tscn" id="3_l6bk7"]
 [ext_resource type="PackedScene" uid="uid://ps57qggjygna" path="res://player/player.tscn" id="3_p24vn"]
 [ext_resource type="PackedScene" uid="uid://cuonn82oqnlfw" path="res://npcs/npc_test.tscn" id="6_gfovx"]
-[ext_resource type="Script" path="res://npcs/npc.gd" id="6_hhg5p"]
 [ext_resource type="PackedScene" uid="uid://knv6ekr14nf8" path="res://hud_menus/ui.tscn" id="6_injti"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tebcl"]
@@ -680,7 +679,6 @@ shape = SubResource("RectangleShape2D_cfkrm")
 
 [node name="Area2D3" parent="." instance=ExtResource("6_gfovx")]
 position = Vector2(1124, 1396)
-script = ExtResource("6_hhg5p")
 
 [node name="Ui" parent="." instance=ExtResource("6_injti")]
 
