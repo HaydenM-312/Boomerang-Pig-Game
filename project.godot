@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="huh"
+config/name="BoomerangPig"
 run/main_scene="res://levels/level_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
@@ -22,7 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
-NewScript="*res://scripts/new_script.gd"
+NewScript="*res://scripts/global_script.gd"
 
 [dialogic]
 
