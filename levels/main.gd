@@ -17,11 +17,7 @@ func _on_area_2d_body_entered(body):
 		if get_node_or_null('Enemy2'):
 			$Enemy2.show()
 
-func _process(delta):
-	pass
-	#if player_present == false:
-		#for enemy_projectile in get_tree().get_nodes_in_group("enemy_projectile"):
-			#enemy_projectile.queue_free()
+#TODO: pause game when dialog is on screen
 
 func _on_area_2d_2_body_entered(body):
 	if body.is_in_group('player'):
