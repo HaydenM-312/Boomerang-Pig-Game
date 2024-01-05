@@ -1,13 +1,14 @@
 extends Area2D
 
 @export var speed = 1000
-@export var damage = 15
+var damage
 
 var velocity = Vector2.ZERO
 
-func start(_transform):
+func start(_transform, value):
 	transform = _transform
 	velocity = transform.x * speed
+	damage = value
 	
 func _process(delta):
 	position += velocity * delta

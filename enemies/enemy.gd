@@ -4,6 +4,7 @@ signal enemy_dead
 
 @export var health = 3
 @export var shoot_cooldown = 2
+@export var damage = 15
 @export var bullet_scene : PackedScene
 var can_shoot
 
@@ -28,7 +29,7 @@ func shoot():
 		$GunCooldown.start()
 		var b = bullet_scene.instantiate()
 		get_tree().root.add_child(b)
-		b.start($Muzzle.global_transform)
+		b.start($Muzzle.global_transform, damage)
 
 func die():
 	enemy_dead.emit()
