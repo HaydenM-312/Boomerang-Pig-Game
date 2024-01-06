@@ -68,7 +68,8 @@ func _process(delta):# Regens stamina
 
 func _physics_process(delta):# Handles physics calculations
 	move_and_slide()
-	look_at(get_global_mouse_position())
+	if can_move:
+		look_at(get_global_mouse_position())
 
 func shoot(): # Lets you shoot and deletes any present boomerangs
 	if can_shoot == false:
@@ -86,8 +87,8 @@ func shoot(): # Lets you shoot and deletes any present boomerangs
 
 
 func set_health(value):# Checks if health is more than max health and sets it accordingly
-	# if you have I-frames you will not lose health
-	if value < health and invincible == true:
+	# during I-frames you will not lose health
+	if value < health and invincible:
 		return
 	value = min(value, max_health)
 	health = value
