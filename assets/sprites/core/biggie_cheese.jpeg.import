@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5pqil7w3b13e"
-path="res://.godot/imported/biggie_cheese.jpeg-5c28ffdd65a2f1885d3c176193577822.ctex"
+uid="uid://chl3gbgiqco1s"
+path="res://.godot/imported/biggie_cheese.jpeg-194b08d1b3ca783a7b49ad6641252a1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://biggie_cheese.jpeg"
-dest_files=["res://.godot/imported/biggie_cheese.jpeg-5c28ffdd65a2f1885d3c176193577822.ctex"]
+source_file="res://assets/sprites/core/biggie_cheese.jpeg"
+dest_files=["res://.godot/imported/biggie_cheese.jpeg-194b08d1b3ca783a7b49ad6641252a1c.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@ extends Node
 
 var enemy_can_shoot
 # DO NOT REMOVE BIGGIE_CHEESE.JPEG REQUIRED AS PLACEHOLDER
-var bc = preload("res://biggie_cheese.jpeg")
+var core = preload("res://assets/sprites/core/biggie_cheese.jpeg")
 
 func _input(event):
 	if event.is_action_pressed("debug_console"):
