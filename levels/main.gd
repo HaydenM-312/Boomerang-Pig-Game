@@ -17,7 +17,6 @@ func _on_area_2d_body_entered(body):
 		if get_node_or_null('Enemy2'):
 			$Enemy2.show()
 
-#TODO: pause game when dialog is on screen
 
 func _on_area_2d_2_body_entered(body):
 	if body.is_in_group('player'):

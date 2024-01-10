@@ -7,6 +7,10 @@ var col = Color(0,0,255)
 func _draw():
 	draw_circle(cen,rad,col)
 
-func _on_ui_update_stamina(value):
+func update_stamina(value):
 	rad = value
 	queue_redraw()
+
+
+func _on_ui_update_stamina(value):
+	update_stamina(value)

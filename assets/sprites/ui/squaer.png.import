@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbriwtjykmt0a"
-path="res://.godot/imported/unnamed.png-bb1b93ae4e138561c1b371b914ec6d3f.ctex"
+uid="uid://1p140i418us2"
+path="res://.godot/imported/squaer.png-5b723d54cb006261e3f8fabaec32e46e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unnamed.png"
-dest_files=["res://.godot/imported/unnamed.png-bb1b93ae4e138561c1b371b914ec6d3f.ctex"]
+source_file="res://assets/sprites/ui/squaer.png"
+dest_files=["res://.godot/imported/squaer.png-5b723d54cb006261e3f8fabaec32e46e.ctex"]
 
 [params]
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://ps57qggjygna"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_5oljv"]
-[ext_resource type="Texture2D" uid="uid://jqfmgaf7pl1r" path="res://unnamed.png" id="2_apvcm"]
+[ext_resource type="Texture2D" uid="uid://bbriwtjykmt0a" path="res://legally_distinct_soup.png" id="2_apvcm"]
 [ext_resource type="PackedScene" uid="uid://ddmyc2ajisxq8" path="res://player/bullet.tscn" id="2_hryha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6si0q"]
-size = Vector2(117, 121)
+size = Vector2(109, 115)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_5oljv")
@@ -19,13 +19,13 @@ texture = ExtResource("2_apvcm")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(-66, 3)
+position = Vector2(-65.6582, 6.68043)
 rotation = -0.818375
-scale = Vector2(0.320312, 0.800781)
+scale = Vector2(0.769788, 1.5551)
 texture = ExtResource("2_apvcm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_6si0q")
 
 [node name="DashTimer" type="Timer" parent="."]

@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwtqqssr2u0xw"]
+
+[ext_resource type="Script" path="res://hud_menus/gui.gd" id="1_jqp0m"]
+[ext_resource type="PackedScene" uid="uid://knv6ekr14nf8" path="res://hud_menus/hud.tscn" id="2_vrx82"]
+[ext_resource type="PackedScene" uid="uid://dtt4ecffoqhmc" path="res://hud_menus/pause_menu.tscn" id="3_i7d0y"]
+[ext_resource type="Script" path="res://hud_menus/exit_popup.gd" id="4_qdl80"]
+[ext_resource type="Texture2D" uid="uid://1p140i418us2" path="res://assets/sprites/ui/squaer.png" id="5_isihv"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_jqp0m")
+
+[node name="GUI" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HUD" parent="." instance=ExtResource("2_vrx82")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_i7d0y")]
+process_mode = 3
+visible = false
+
+[node name="ExitPopup" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.0
+offset_top = -106.5
+offset_right = 204.0
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("4_qdl80")
+metadata/_edit_group_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ExitPopup"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 408.0
+offset_bottom = 214.0
+texture = ExtResource("5_isihv")
+
+[node name="Label" type="Label" parent="ExitPopup"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.5
+offset_top = -66.5
+offset_right = 174.5
+offset_bottom = -32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 27
+text = "Are you sure you want to exit?"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ExitPopup"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 12.5
+offset_right = -24.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 125
+
+[node name="YesButton" type="Button" parent="ExitPopup/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "   Yes   "
+icon_alignment = 1
+
+[node name="NoButton" type="Button" parent="ExitPopup/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "   No    "
+
+[connection signal="exit" from="." to="PauseMenu" method="_on_exit_button_pressed"]
+[connection signal="settings" from="." to="PauseMenu" method="_on_settings_button_pressed"]
+[connection signal="update_stamina" from="HUD" to="HUD" method="_on_update_stamina"]
+[connection signal="quit" from="PauseMenu" to="ExitPopup" method="_on_pause_menu_quit"]
+[connection signal="settings" from="PauseMenu" to="GUI" method="_on_pause_menu_settings"]
+[connection signal="unpause" from="PauseMenu" to="." method="_on_pause_menu_unpause"]
+[connection signal="unpause" from="PauseMenu" to="GUI" method="_on_pause_menu_unpause"]
+[connection signal="pressed" from="ExitPopup/HBoxContainer/YesButton" to="ExitPopup" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="ExitPopup/HBoxContainer/NoButton" to="ExitPopup" method="_on_no_button_pressed"]
