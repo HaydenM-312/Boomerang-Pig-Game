@@ -6,18 +6,8 @@
 [ext_resource type="Script" path="res://hud_menus/exit_popup.gd" id="4_qdl80"]
 [ext_resource type="Texture2D" uid="uid://1p140i418us2" path="res://assets/sprites/ui/squaer.png" id="5_isihv"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="GUI" type="CanvasLayer"]
 script = ExtResource("1_jqp0m")
-
-[node name="GUI" type="Control" parent="."]
-process_mode = 3
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="HUD" parent="." instance=ExtResource("2_vrx82")]
 
@@ -97,8 +87,6 @@ text = "   No    "
 [connection signal="settings" from="." to="PauseMenu" method="_on_settings_button_pressed"]
 [connection signal="update_stamina" from="HUD" to="HUD" method="_on_update_stamina"]
 [connection signal="quit" from="PauseMenu" to="ExitPopup" method="_on_pause_menu_quit"]
-[connection signal="settings" from="PauseMenu" to="GUI" method="_on_pause_menu_settings"]
 [connection signal="unpause" from="PauseMenu" to="." method="_on_pause_menu_unpause"]
-[connection signal="unpause" from="PauseMenu" to="GUI" method="_on_pause_menu_unpause"]
 [connection signal="pressed" from="ExitPopup/HBoxContainer/YesButton" to="ExitPopup" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="ExitPopup/HBoxContainer/NoButton" to="ExitPopup" method="_on_no_button_pressed"]
