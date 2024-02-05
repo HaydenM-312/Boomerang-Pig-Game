@@ -85,6 +85,7 @@ text = "   No    "
 
 [connection signal="exit" from="." to="PauseMenu" method="_on_exit_button_pressed"]
 [connection signal="settings" from="." to="PauseMenu" method="_on_settings_button_pressed"]
+[connection signal="stamina_update" from="." to="HUD" method="_on_gui_update_stamina"]
 [connection signal="update_stamina" from="HUD" to="HUD" method="_on_update_stamina"]
 [connection signal="quit" from="PauseMenu" to="ExitPopup" method="_on_pause_menu_quit"]
 [connection signal="unpause" from="PauseMenu" to="." method="_on_pause_menu_unpause"]
