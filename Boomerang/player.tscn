@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfag2fjpjcy3"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_4i8jl"]
+[ext_resource type="Texture2D" uid="uid://co876f5pec3mg" path="res://icon.svg" id="2_angn8"]
+[ext_resource type="PackedScene" uid="uid://b6pxxlesbcjdq" path="res://boomerang.tscn" id="3_1p06a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6w15"]
+size = Vector2(127, 126)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(595, 296)
+script = ExtResource("1_4i8jl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1)
+scale = Vector2(0.5, 0.75)
+shape = SubResource("RectangleShape2D_t6w15")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(0.5, 0.316467)
+texture = ExtResource("2_angn8")
+
+[node name="Boomerang" parent="." instance=ExtResource("3_1p06a")]
+position = Vector2(30, 4)
